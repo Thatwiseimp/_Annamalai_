@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Annamalai</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>Annamalaiii!!</h2>
+	<script src="index.js"></script>
+    {% if profile %}
+        <ul style="display:flex">
+            <li>{{ profile.Customer_name }}</li>
+            <li>{{ profile.Phone_number }}</li>
+            <li>{{ total_sum }}</li>
+        </ul>
+    {% else %}
+        <p>No entries are available.</p>
+    {% endif %}
+  </body>
+</html>

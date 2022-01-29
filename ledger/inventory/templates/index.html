@@ -5,20 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Annamalai</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <h2>Annamalaiii!!</h2>
 	<script src="index.js"></script>
-    {% if queryset %}
-        <ul>
-        {% for entry in queryset %}
-            <li>{{ entry.Customer_name }}</li>
-            <li>{{ entry.Phone_number }}</li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No entries are available.</p>
+    {% if store %}
+      <table>
+          <tr>
+            <th>Name</th>
+            <th>Blue</th>
+            <th>Green</th>
+            <th>Orange</th>
+          </tr>
+          {% for entry in store %}
+
+          <tr>
+              <td>{{ entry.name }}</td>
+              <td> <button onclick="increment()">-</button>  {{ entry.blue }}  <button onclick="decrement()">+</button></td>
+              <td> <button onclick="increment()">-</button>  {{ entry.green }}  <button onclick="decrement()">+</button></td>
+              <td> <button onclick="increment()">-</button>  {{ entry.orange }}  <button onclick="decrement()">+</button></td>
+          </tr>
+          {% endfor %}
+        </table>
+
     {% endif %}
   </body>
 </html>
